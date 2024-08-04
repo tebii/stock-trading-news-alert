@@ -38,7 +38,7 @@ b4yest_stock_price = stock_data["Time Series (Daily)"][b4yest]["4. close"]
 
 diff = abs(float(yest_stock_price) - float(b4yest_stock_price))
 is_pos = yest_stock_price > b4yest_stock_price
-perc_diff = diff / ((float(yest_stock_price) + float(b4yest_stock_price)) / 2 ) * 100
+perc_diff = (diff / float(yest_stock_price) * 100
 
 get_news = False
 if perc_diff > 5:
